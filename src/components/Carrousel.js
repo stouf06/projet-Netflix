@@ -1,7 +1,13 @@
 
 import React from 'react';
+import image1 from "../assets/image1.png"; import image8 from "../assets/image8.png";
+import image2 from "../assets/image2.png"; import image9 from "../assets/image9.png";
+import image3 from "../assets/image3.png"; import image10 from "../assets/image10.png";
+import image4 from "../assets/image4.png"; import image11 from "../assets/image11.png";
+import image5 from "../assets/image5.png"; import image12 from "../assets/image12.png";
+import image6 from "../assets/image6.png"; import image13 from "../assets/image13.png";
+import image7 from "../assets/image7.png"; import image14 from "../assets/image14.png";
 import "../assets/Carrousel.css";
-import "../assets/image1.png";
 import Slider from "react-slick";
 
 const Carrousel = () => {
@@ -9,7 +15,7 @@ const Carrousel = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
       {
@@ -30,23 +36,23 @@ const Carrousel = () => {
   };
 
   const imagesRevoir = [
-    "image1.png",
-    "image2.png",
-    "image3.png",
-    "image4.png",
-    "image5.png",
-    "image6.png",
-    "image7.png",
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
   ];
 
   const imagesTendances = [
-    "image8.png",
-    "image9.png",
-    "image10.png",
-    "image11.png",
-    "image12.png",
-    "image13.png",
-    "image14.png",
+    image8,
+    image9,
+    image10,
+    image11,
+    image12,
+    image13,
+    image14,
   ];
 
   return (
