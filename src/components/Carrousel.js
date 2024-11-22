@@ -5,8 +5,8 @@ import image2 from "../assets/image2.png"; import image9 from "../assets/image9.
 import image3 from "../assets/image3.png"; import image10 from "../assets/image10.png";
 import image4 from "../assets/image4.png"; import image11 from "../assets/image11.png";
 import image5 from "../assets/image5.png"; import image12 from "../assets/image12.png";
-import image6 from "../assets/image6.png"; import image13 from "../assets/image13.png";
-import image7 from "../assets/image7.png"; import image14 from "../assets/image14.png";
+import image6 from "../assets/image6.svg"; import image13 from "../assets/image13.png";
+import image7 from "../assets/image7.svg"; import image14 from "../assets/image14.png";
 import "../assets/Carrousel.css";
 import Slider from "react-slick";
 

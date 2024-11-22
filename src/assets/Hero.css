@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 800px;
+    object-fit: cover;
     background-color: #141414;
     background: url(Narcos.jpg) no-repeat center center/cover;
     display: flex;
@@ -35,4 +36,17 @@
     align-items: center;
     justify-content: left;
     gap: 20px;
+}
+
+.hero-buttons button {
+    opacity: 0.4; /* Applique une transparence à 40 % */
+    background-color: rgba(255, 255, 255, 0.8); /* Je m'assure que la couleur d'arrière-plan prend en charge la transparence */
+    border: 1px solid #fff; /* Exemple de bordure, j'ajuste selon mes besoins */
+    padding: 10px 20px; /* J'ajuste les dimensions du bouton */
+    border-radius: 5px; /* Coin légèrement arrondi, optionnel */
+    transition: opacity 0.3s ease; /* Pour un effet plus fluide lors d'un hover */
+}
+
+.hero-buttons button:hover {
+    opacity: 1; /* Rend le bouton totalement opaque lorsqu'on le survole */
 }
