@@ -3,6 +3,8 @@ import React from 'react';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Carrousel from "./components/Carrousel";
+import Discovery from "./components/Discovery";
+import FilmList from "./components/FilmList";
 import Footer from "./components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -43,6 +45,8 @@ function App() {
       <Navbar/>
       <Hero/>
       <Carrousel/>
+      <Discovery/>
+      <FilmList/>
       <Footer
                 socialLinks={socialLinks}
                 footerLinks={footerLinks}

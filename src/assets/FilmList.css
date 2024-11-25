@@ -1,0 +1,35 @@
+.FilmList {
+    display: flex;            /* Active le mode flexbox */
+    flex-direction: row;      /* Aligne les éléments horizontalement */
+    justify-content: center;  /* Centre les images horizontalement dans le conteneur */
+    background: #141414;
+    background: linear-gradient(
+      to right,
+      #141414, black
+    );
+}
+
+.FilmList img {
+    width: 350px;             /* Largeur des images */
+    height: 250px;           /* Hauteur des images */
+    object-fit: cover;        /* Recadre l'image sans distorsion */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
+    transition: transform 0.3s ease; /* Animation pour le hover */
+}
+
+.FilmList img:hover {
+    transform: scale(1.10); /* Agrandit légèrement l'image au survol */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Accentue l'ombre au survol */
+}
+
+@media (max-width: 600px) {
+    .FilmList {
+        flex-wrap: wrap;      /* Permet de passer à la ligne si nécessaire */
+        justify-content: center; /* Centre les éléments même lorsqu'ils se plient */
+    }
+
+    .FilmList img {
+        width: 150px;         /* Réduit la largeur des images pour s'adapter */
+        height: auto;         /* Ajuste la hauteur automatiquement */
+    }
+}

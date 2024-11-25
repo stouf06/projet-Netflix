@@ -6,8 +6,8 @@ function Hero() {
   return (
     <div className="hero">
       <div className="hero-content">
-        <span className="hero-label">NETFLIX <span className="original">ORIGINAL</span></span>
-        <h1 className="hero-title">Narcos</h1>
+        <span className="hero-label">NETFLIX </span><span className="original">ORIGINAL</span>
+        <h1 className="hero-title">NARCOS</h1>
         <p className="hero-subtitle">Regardez la saison 3 maintenant</p>
         <p className="hero-description">
           Le cartel de Cali reprend le pouvoir en Colombie.<br/>
