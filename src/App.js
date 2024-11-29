@@ -1,10 +1,13 @@
 
-import React from 'react';
+import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Carrousel from "./components/Carrousel";
 import Discovery from "./components/Discovery";
 import FilmList from "./components/FilmList";
+import Tabs from "./components/Tabs";
+import Carrousel2 from "./components/Carrousel2";
+import Categories from "./components/Categories";
 import Footer from "./components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -40,20 +43,23 @@ function App() {
         { href: '#', label: 'Mentions légales' }
     ]
   ];
+
   return (
     <div className="App">
-      <Navbar/>
-      <Hero/>
-      <Carrousel/>
-      <Discovery/>
-      <FilmList/>
-      <Footer
+          <Navbar />
+          <Hero/>
+          <Carrousel/>
+          <Discovery/>
+          <FilmList/>
+          <Tabs/>
+          <Carrousel2/>
+          <Categories/>
+          <Footer
                 socialLinks={socialLinks}
                 footerLinks={footerLinks}
                 serviceCodeText="Service Code"
                 copyright="© 1997-2024 Netflix, Inc."
             />
-      
     </div>
   );
 }

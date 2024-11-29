@@ -1,0 +1,19 @@
+.tabs {
+    background: #141414;
+    background: linear-gradient(
+      to right,
+      #141414, black
+    );
+}
+
+.tabs-content {
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+
+.tabs-label1 {
+    color: white;
+    display: inline red;
+    border-bottom: 3px solid red;
+}

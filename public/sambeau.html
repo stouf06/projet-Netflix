@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Pure</title>
+    <style>
+      body {
+        color: white;
+        background-color: #141414;
+      }
+      .scrollable {
+        display: flex;
+        overflow-x: scroll;
+        scrollbar-width: none;
+      }
+
+      .details {
+        position: relative;
+      }
+
+      .details__bg {
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .details__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 67px;
+        padding-left: 60px;
+      }
+
+      .details__title {
+        margin-top: 34px;
+      }
+
+      .details__description {
+        max-width: 580px;
+      }
+
+      .titres a {
+        white-space: nowrap;
+        transition: all ease 0.25s;
+      }
+
+      .titres a:hover {
+        border-bottom: 2px solid red;
+        cursor: pointer;
+      }
+
+      .titres .scrollable {
+        gap: 76px;
+      }
+
+      .originaux h3 {
+        text-transform: uppercase;
+      }
+
+      .arrow {
+        height: 13px;
+        margin-left: 35px;
+      }
+
+      .category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        gap: 20px;
+        height: 124px;
+        width: 204px;
+      }
+
+      .category:nth-child(odd) {
+        transition: all ease 0.25s;
+      }
+
+      .category:hover {
+        margin-top: 2rem;
+      }
+
+      .category:nth-child(1),
+      .category:nth-child(4n + 1) {
+        background: linear-gradient(#fd5183, #f04275);
+      }
+
+      .category:nth-child(2),
+      .category:nth-child(4n + 2) {
+        background: linear-gradient(#ffc852, #eeb843);
+      }
+
+      .category:nth-child(3),
+      .category:nth-child(4n + 3) {
+        background: linear-gradient(#81a7fc, #6e96ef);
+      }
+
+      .category:nth-child(4),
+      .category:nth-child(4n + 4) {
+        background: linear-gradient(#bf64ff, #ab50eb);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Section revoir -->
+    <section class="revoir">
+      <h3>Revoir</h3>
+      <div class="scrollable">
+        <img src="1-01.png" alt="" />
+        <img src="1-02.png" alt="" />
+        <img src="1-03.png" alt="" />
+        <img src="1-04.png" alt="" />
+        <img src="1-05.png" alt="" />
+        <img src="1-06.png" alt="" />
+        <img src="1-06.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Section tendances -->
+    <section class="tendances">
+      <h3>Tendances</h3>
+      <div class="scrollable">
+        <img src="2-01.png" alt="" />
+        <img src="2-02.png" alt="" />
+        <img src="2-03.png" alt="" />
+        <img src="2-04.png" alt="" />
+        <img src="2-05.png" alt="" />
+        <img src="2-06.png" alt="" />
+        <img src="2-06.png" alt="" />
+        <img src="2-07.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Section details -->
+    <section class="details">
+      <img src="bg-poland.png" class="details__bg" />
+      <div class="details__content">
+        <img src="l-age-d-or-du-cinema-polonais.svg" height="38" />
+        <img class="details__title" src="polonais.svg" height="61" />
+        <h3>Netflix Découverte - Juillet 2018</h3>
+        <p class="details__description">
+          Andrzej Wajda, Roman Polański, Agnieszka Holland, Paweł Pawlikowski…
+          Découvrez ceux qui ont fait connaitre le cinéma polonais sur la scène
+          internationale.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section films -->
+    <section class="films">
+      <div class="scrollable">
+        <img src="bg-coldwar.png" alt="" />
+        <img src="bg-ida.png" alt="" />
+        <img src="bg-kanal.png" alt="" />
+        <img src="bg-polanski.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Section titres -->
+    <section class="titres">
+      <div class="scrollable">
+        <a>L’âge d’or du cinéma polonais (juillet 2018)</a>
+        <a>La nouvelle vague française (juin 2018)</a>
+        <a>Direction Cannes (mai 2018)</a>
+        <a>Bollywood Classiques (mai 2018)</a>
+        <a>L’âge d’or du cinéma polonais (juillet 2018)</a>
+        <a>La nouvelle vague française (juin 2018)</a>
+        <a>Direction Cannes (mai 2018)</a>
+        <a>Bollywood Classiques (mai 2018)</a>
+      </div>
+    </section>
+
+    <!-- Section programmes originaux -->
+    <section class="originaux">
+      <h3>
+        Programmes originaux Netflix <img src="arrow.svg" class="arrow" />
+      </h3>
+      <div class="scrollable">
+        <img src="3-01.png" alt="" />
+        <img src="3-02.png" alt="" />
+        <img src="3-04.png" alt="" />
+        <img src="3-05.png" alt="" />
+        <img src="3-06.png" alt="" />
+        <img src="3-07.png" alt="" />
+        <img src="3-03.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Section Catégories -->
+    <section class="categories">
+      <h3>Catégories</h3>
+      <div class="scrollable">
+        <div class="category">Comédie <img src="caret-down.svg" /></div>
+        <div class="category">Action <img src="caret-down.svg" /></div>
+        <div class="category">Drame <img src="caret-down.svg" /></div>
+        <div class="category">Sci-Fi <img src="caret-down.svg" /></div>
+        <div class="category">Romance <img src="caret-down.svg" /></div>
+        <div class="category">Thriller <img src="caret-down.svg" /></div>
+        <div class="category">Émissions <img src="caret-down.svg" /></div>
+        <div class="category">Horreur <img src="caret-down.svg" /></div>
+        <div class="category">Enfants <img src="caret-down.svg" /></div>
+        <div class="category">Documentaire <img src="caret-down.svg" /></div>
+      </div>
+    </section>
+  </body>
+</html>
