@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Films Tendances</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f3f3;
+      color: #333;
+    }
+    header {
+      background-color: #444;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .movies-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      justify-content: center;
+    }
+    .movie-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-width: 200px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .movie-card img {
+      width: 100%;
+    }
+    .movie-card h3 {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    .movie-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0 10px 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Films Tendances</h1>
+  </header>
+  <div class="movies-container" id="moviesContainer">
+    <!-- Les films seront injectés ici -->
+  </div>
+
+  <script>
+    const API_KEY = "VOTRE_CLE_API";
+    const BASE_URL = "https://api.themoviedb.org/3";
+    const TRENDING_URL = `${BASE_URL}/trending/movie/week?api_key=${API_KEY}`;
+
+    async function fetchTrendingMovies() {
+      try {
+        const response = await fetch(TRENDING_URL);
+        const data = await response.json();
+
+        // Ne garder que les 7 premiers films
+        const movies = data.results.slice(0, 7);
+
+        // Afficher les films sur la page
+        displayMovies(movies);
+      } catch (error) {
+        console.error("Erreur lors de la récupération des films :", error);
+      }
+    }
+
+    function displayMovies(movies) {
+      const container = document.getElementById("moviesContainer");
+      container.innerHTML = ""; // Nettoyer le conteneur
+
+      movies.forEach((movie) => {
+        const movieCard = document.createElement("div");
+        movieCard.className = "movie-card";
+
+        movieCard.innerHTML = `
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}" />
+          <h3>${movie.title}</h3>
+          <p>${movie.release_date}</p>
+          <p>⭐ ${movie.vote_average} / 10</p>
+        `;
+
+        container.appendChild(movieCard);
+      });
+    }
+
+    // Charger les films tendances au chargement de la page
+    fetchTrendingMovies();
+  </script>
+</body>
+</html>
